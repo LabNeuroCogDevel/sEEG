@@ -8,7 +8,7 @@ def create_key(template, outtype=('nii.gz',), annotation_classes=None):
 
 
 def infotodict(seqinfo):
-    t1w = create_key('sub-{subject}/anat/sub-{subject}_run-{itme:02d}-T1w')
+    t1w = create_key('sub-{subject}/anat/sub-{subject}_run-{item:02d}_T1w')
     restshort = create_key('sub-{subject}/func/sub-{subject}_task-restshort_run-{item:02d}_bold')
     restlong = create_key('sub-{subject}/func/sub-{subject}_task-restlong_run-{item:02d}_bold')
     info = {t1w: [], restlong: [], restshort: []}
